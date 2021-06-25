@@ -122,6 +122,10 @@ const controllerAddRecipe = async function (newRecipe) {
   }
 };
 
+const builtin = function () {
+  return 'use this here';
+};
+
 const init = function () {
   bookmarksView.addhandlerBookmark(controllerBookmarks);
   recipeView.addhandlerRender(controllerRecipe);
@@ -130,6 +134,7 @@ const init = function () {
   searchView.addHandlerSearch(controllerSearchResult);
   paginationView.addhandlerClick(controllerPagination);
   addRecipeView.handlerUploader(controllerAddRecipe);
+  builtin();
 };
 
 init();
